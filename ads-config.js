@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ============================================================================
  * SavoryPlate - HilltopAds Integration & Configuration Script
  * ============================================================================
@@ -45,7 +45,7 @@
             scriptUrl: 'https://whoslick.com/pfe/current/tag.min.js?z=1084292',
             delayBeforeShowMs: 4000,
             previewCreative: {
-                title: '👨‍🍳 Chef Marco Recommended',
+                title: 'ðŸ‘¨â€ðŸ³ Chef Marco Recommended',
                 body: 'Exclusive 25% Off: Artisan Cast Iron Dutch Ovens & Chef Knives',
                 icon: 'https://images.unsplash.com/photo-1584990347449-399c642643a5?auto=format&fit=crop&w=150&q=80',
                 actionText: 'Claim Deal',
@@ -184,7 +184,7 @@
                 } else {
                     // Preview feedback toast
                     SavoryAdsEngine.showNotificationToast(
-                        `✨ HilltopAds Zone 1 (Popunder #${config.zoneId}) activated! (Frequency cap: 1 / ${config.frequencyCappingHours} hrs)`
+                        `âœ¨ HilltopAds Zone 1 (Popunder #${config.zoneId}) activated! (Frequency cap: 1 / ${config.frequencyCappingHours} hrs)`
                     );
                 }
             };
@@ -221,7 +221,7 @@
                     <div class="ipp-card" role="alert" aria-live="polite">
                         <button class="ipp-close-btn ad-close-btn" aria-label="Close push notification">&times;</button>
                         <div class="ipp-header">
-                            <span class="ipp-badge">HilltopAds MultiTag IPP • Zone #${config.zoneId}</span>
+                            <span class="ipp-badge">HilltopAds MultiTag IPP â€¢ Zone #${config.zoneId}</span>
                         </div>
                         <div class="ipp-content">
                             <img src="${config.previewCreative.icon}" alt="Culinary Recommendation" class="ipp-thumb" />
@@ -343,9 +343,9 @@
             container.innerHTML = `
                 <div class="slider-widget-box" id="slider-widget-box">
                     <div class="slider-header">
-                        <span class="slider-zone-tag">HilltopAds Video Slider • Zone #${config.zoneId}</span>
+                        <span class="slider-zone-tag">HilltopAds Video Slider â€¢ Zone #${config.zoneId}</span>
                         <div class="slider-controls">
-                            <button id="slider-mute-toggle" class="slider-icon-btn" title="Toggle Sound">🔇</button>
+                            <button id="slider-mute-toggle" class="slider-icon-btn" title="Toggle Sound">ðŸ”‡</button>
                             <button id="slider-minimize-btn" class="slider-icon-btn" title="Minimize">&minus;</button>
                             <button id="slider-close-btn" class="slider-icon-btn ad-close-btn" title="Close">&times;</button>
                         </div>
@@ -397,7 +397,7 @@
                 muteBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     video.muted = !video.muted;
-                    muteBtn.textContent = video.muted ? '🔇' : '🔊';
+                    muteBtn.textContent = video.muted ? 'ðŸ”‡' : 'ðŸ”Š';
                 });
             }
         },
@@ -429,9 +429,9 @@
                         if (actionType === 'print') {
                             window.print();
                         } else if (actionType === 'cart') {
-                            SavoryAdsEngine.showNotificationToast('🛒 All 9 ingredients sent to your Grocery Shopping Cart!');
+                            SavoryAdsEngine.showNotificationToast('ðŸ›’ All 9 ingredients sent to your Grocery Shopping Cart!');
                         } else if (actionType === 'mealplan') {
-                            SavoryAdsEngine.showNotificationToast('📥 7-Day Artisan Meal Prep Guide is downloading!');
+                            SavoryAdsEngine.showNotificationToast('ðŸ“¥ 7-Day Artisan Meal Prep Guide is downloading!');
                         }
                     });
                 });
@@ -481,7 +481,7 @@
 
             vastOverlay.innerHTML = `
                 <div class="vast-ad-badge">
-                    <span class="vast-tag">Ad by HilltopAds • Zone #${config.zoneId}</span>
+                    <span class="vast-tag">Ad by HilltopAds â€¢ Zone #${config.zoneId}</span>
                     <span class="vast-countdown" id="vast-timer">Ad finishes in ${secondsRemaining}s</span>
                 </div>
                 <video id="vast-ad-video" class="vast-video-elem" autoplay playsinline>
@@ -625,3 +625,4 @@
     window.SavoryAdsEngine = SavoryAdsEngine;
 
 })(window, document);
+
